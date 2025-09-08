@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
         var id_token = await core.getIDToken();
         var decoded = jwt.decode(id_token , {complete: true});
         for(var key in decoded.payload) {
-            core.setOutput(key, decoded.payload[key]);
+            core.info(key, decoded.payload[key]);
         }
         if(decoded.payload.job_workflow_ref) {
             var nameAndRef = decoded.payload.job_workflow_ref.split("@", 2);
@@ -21,7 +21,7 @@ const jwt = require("jsonwebtoken");
             }
         }
     } catch(ex) {
-        core.error("Failed to get odic token, did you forget the `permissions: { id-token: write }` permission in your caller workflow, alternatively `permissions: write-all` works too: " + ex.toString());
+        core.error("Failed to get odic token, did you forget the `permissions: { id-token: write }` permission in your caller workflow: " + ex.toString());
         process.exit(1);
     }
 })()
