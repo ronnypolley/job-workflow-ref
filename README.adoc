@@ -1,3 +1,4 @@
 = job-workflow-ref Action
 
 image:https://sonarcloud.io/api/project_badges/quality_gate?project=ronnypolley_job-workflow-ref[link=https://sonarcloud.io/project/overview?id=ronnypolley_job-workflow-ref]
+image:https://api.scorecard.dev/projects/github.com/ronnypolley/job-workflow-ref/badge)](https://scorecard.dev/viewer/?uri=github.com/ronnypolley/job-workflow-ref)
