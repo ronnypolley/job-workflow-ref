@@ -5,8 +5,17 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
+    target: main
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    open-pull-requests-limit: 15
+
+  
+  - package-ecosystem: "github-actions"
+    directory: "/" 
+    target: main
+    schedule:
+      interval: "daily"
     open-pull-requests-limit: 15
